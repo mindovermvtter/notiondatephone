@@ -5,13 +5,13 @@
 #lbl {
     font-family: monospace;
     font-size: xx-large;
-    color: #626262;
     text-align: center;
     line-height: 1.5;
 }
 body{
-    background-color: ;
-}
+    background-color: #2f3437;
+    color: white;
+    }
 .full-table {
     display: table;
     width: 100%;
@@ -41,7 +41,7 @@ body{
     </style>
 </head>
 <body>
-    <div id="lbl"></div>
+    <div id="lbl" onclick = "gfg_Run()"></div>
     <div class="full-table">
   <div class="table-cell">
       </div>
@@ -79,7 +79,7 @@ body{
     var today = new Date();
     var dayOfWeek = weekday[today.getDay()];
     var monthOfYear = month[today.getMonth()+1];
-    var date = dayOfWeek+"<br>" +monthOfYear+ " " + today.getDate()
+    var date = dayOfWeek+", " +monthOfYear+ " " + today.getDate()
 
     document.getElementById('lbl').innerHTML =
         date+="";
@@ -122,6 +122,21 @@ setTimeout(dateTime, 500);
 }
 
 dateTime()  
+
+
+            function changeBackgroundColor(color) { 
+                document.body.style.background = color; 
+            } 
+                      
+            function changeTextColor(color) { 
+                document.body.style.color = color; 
+            } 
+              
+              
+            function gfg_Run() { 
+                changeBackgroundColor('white'); 
+                changeTextColor('#626262'); 
+            }             
 </script>
 
 </html>
